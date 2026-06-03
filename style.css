@@ -516,3 +516,98 @@ footer p {
     text-align: center;
   }
 }
+/* AJUSTE PREMIUM DA FOTO DE PERFIL */
+
+.hero {
+  min-height: 560px;
+}
+
+.hero-content {
+  grid-template-columns: 1.3fr 360px;
+  gap: 42px;
+  margin-top: 75px;
+}
+
+.hero h1 {
+  font-size: 54px;
+}
+
+.hero h2 {
+  font-size: 24px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero-card {
+  max-width: 340px;
+  padding: 18px;
+  border-radius: 28px;
+  margin-left: auto;
+}
+
+.profile-frame {
+  width: 230px;
+  height: 285px;
+  max-width: 230px;
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.profile-status {
+  font-size: 11px;
+  padding: 7px 11px;
+  margin-bottom: 14px;
+}
+
+.hero-card h3 {
+  font-size: 20px;
+}
+
+.hero-card p {
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    margin: 30px auto 0;
+  }
+
+  .profile-frame {
+    width: 220px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile-frame {
+    width: 200px;
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+}
