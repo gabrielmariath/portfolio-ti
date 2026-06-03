@@ -13,6 +13,7 @@ body {
   background: #f4f7fb;
   color: #172033;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,8 +21,7 @@ a {
 }
 
 .hero {
-  min-height: 680px;
-  padding: 28px 8%;
+  padding: 28px 8% 90px;
   background:
     radial-gradient(circle at top right, rgba(56, 189, 248, 0.28), transparent 35%),
     radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.25), transparent 35%),
@@ -43,6 +43,8 @@ a {
 }
 
 .navbar {
+  max-width: 1150px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,13 +79,18 @@ a {
 }
 
 .hero-content {
+  max-width: 1150px;
+  margin: 90px auto 0;
   display: grid;
-  grid-template-columns: 1.35fr 0.85fr;
-  gap: 58px;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
   align-items: center;
-  margin-top: 95px;
   position: relative;
   z-index: 2;
+}
+
+.hero-text {
+  max-width: 760px;
 }
 
 .badge {
@@ -98,20 +105,21 @@ a {
 }
 
 .hero h1 {
-  font-size: 64px;
+  font-size: 58px;
   line-height: 1;
   margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 
 .hero h2 {
-  font-size: 28px;
+  font-size: 24px;
   color: #bae6fd;
   margin-bottom: 22px;
   font-weight: 700;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 18px;
   max-width: 760px;
   color: #e5e7eb;
 }
@@ -147,24 +155,25 @@ a {
 }
 
 .hero-card {
+  width: 300px;
+  max-width: 300px;
   background: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.20);
-  border-radius: 34px;
-  padding: 24px;
+  border-radius: 30px;
+  padding: 18px;
   text-align: center;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
 }
 
 .profile-frame {
-  width: 100%;
-  max-width: 320px;
-  height: 390px;
-  margin: 0 auto 22px;
-  border-radius: 28px;
+  width: 220px;
+  height: 270px;
+  margin: 0 auto 16px;
+  border-radius: 24px;
   overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32);
   position: relative;
 }
 
@@ -190,34 +199,34 @@ a {
   background: rgba(34, 197, 94, 0.12);
   color: #bbf7d0;
   border: 1px solid rgba(34, 197, 94, 0.35);
-  padding: 8px 13px;
+  padding: 7px 11px;
   border-radius: 999px;
   font-weight: 800;
-  font-size: 13px;
-  margin-bottom: 18px;
+  font-size: 11px;
+  margin-bottom: 14px;
 }
 
 .profile-status span {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background: #22c55e;
   border-radius: 50%;
   box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.15);
 }
 
 .hero-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .hero-card p {
-  font-size: 16px;
+  font-size: 14px;
   color: #e5e7eb;
 }
 
 .stats {
   max-width: 1150px;
-  margin: -80px auto 0;
+  margin: 34px auto 0;
   padding: 0 8%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -226,7 +235,7 @@ a {
   z-index: 3;
 }
 
-.stats div {
+.stat-card {
   background: white;
   padding: 34px 28px;
   border-radius: 22px;
@@ -235,15 +244,20 @@ a {
   border: 1px solid #e5e7eb;
 }
 
-.stats h2 {
+.stat-card h2 {
   font-size: 42px;
   color: #1e3a8a;
   margin-bottom: 6px;
 }
 
-.stats p {
+.stat-card p {
   font-weight: 700;
   color: #475569;
+}
+
+.counter {
+  display: inline-block;
+  min-width: 76px;
 }
 
 .section {
@@ -436,35 +450,39 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    padding: 24px 6% 60px;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
-    margin-top: 70px;
+    gap: 34px;
+    margin-top: 60px;
+  }
+
+  .hero-card {
+    margin: auto;
   }
 
   .hero h1 {
-    font-size: 46px;
+    font-size: 44px;
   }
 
   .hero h2 {
-    font-size: 24px;
-  }
-
-  .profile-frame {
-    height: 420px;
+    font-size: 22px;
   }
 
   .stats {
     grid-template-columns: 1fr;
-    margin-top: 0;
-    padding-top: 40px;
+    padding: 0 6%;
+  }
+
+  .section {
+    padding: 60px 6%;
   }
 }
 
 @media (max-width: 650px) {
-  .hero {
-    padding: 24px 6%;
-  }
-
   .navbar {
     align-items: flex-start;
     gap: 18px;
@@ -485,19 +503,21 @@ footer p {
   }
 
   .hero h2 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .hero p {
     font-size: 17px;
   }
 
-  .profile-frame {
-    height: 360px;
+  .hero-card {
+    width: 100%;
+    max-width: 290px;
   }
 
-  .section {
-    padding: 60px 6%;
+  .profile-frame {
+    width: 205px;
+    height: 255px;
   }
 
   .section h2 {
@@ -514,77 +534,5 @@ footer p {
 
   .contact-links a {
     text-align: center;
-  }
-}
-/* CORREÇÃO FINAL - FOTO PREMIUM MENOR */
-
-body {
-  overflow-x: hidden !important;
-}
-
-.hero {
-  min-height: 620px !important;
-}
-
-.hero-content {
-  max-width: 1150px !important;
-  margin: 90px auto 0 !important;
-  display: grid !important;
-  grid-template-columns: 1fr 280px !important;
-  gap: 42px !important;
-  align-items: center !important;
-}
-
-.hero-card {
-  width: 280px !important;
-  max-width: 280px !important;
-  padding: 16px !important;
-  border-radius: 26px !important;
-  margin-left: auto !important;
-}
-
-.profile-frame {
-  width: 210px !important;
-  max-width: 210px !important;
-  height: 260px !important;
-  margin: 0 auto 16px !important;
-  border-radius: 22px !important;
-  overflow: hidden !important;
-}
-
-.profile-photo {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center top !important;
-  display: block !important;
-}
-
-.profile-status {
-  font-size: 10px !important;
-  padding: 6px 10px !important;
-  margin-bottom: 12px !important;
-}
-
-.hero-card h3 {
-  font-size: 18px !important;
-}
-
-.hero-card p {
-  font-size: 13px !important;
-}
-
-@media (max-width: 900px) {
-  .hero-content {
-    grid-template-columns: 1fr !important;
-  }
-
-  .hero-card {
-    margin: 30px auto 0 !important;
-  }
-
-  .profile-frame {
-    width: 200px !important;
-    height: 250px !important;
   }
 }
