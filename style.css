@@ -20,18 +20,34 @@ a {
 }
 
 .hero {
-  min-height: 660px;
+  min-height: 680px;
   padding: 28px 8%;
   background:
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.25), transparent 35%),
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.28), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.25), transparent 35%),
     linear-gradient(135deg, #0f172a, #1e3a8a 55%, #0f172a);
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.08);
+  right: -120px;
+  bottom: -160px;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -45,6 +61,7 @@ a {
   justify-content: center;
   font-weight: 900;
   font-size: 18px;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
 }
 
 .nav-links a {
@@ -61,10 +78,12 @@ a {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
-  gap: 48px;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 58px;
   align-items: center;
-  margin-top: 110px;
+  margin-top: 95px;
+  position: relative;
+  z-index: 2;
 }
 
 .badge {
@@ -128,28 +147,62 @@ a {
 }
 
 .hero-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 28px;
-  padding: 34px;
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 34px;
+  padding: 24px;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
 }
 
-.avatar {
-  width: 130px;
-  height: 130px;
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  border-radius: 50%;
-  margin: 0 auto 24px;
-  display: flex;
+.profile-frame {
+  width: 100%;
+  max-width: 320px;
+  height: 390px;
+  margin: 0 auto 22px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.profile-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.25), transparent 45%);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.profile-status {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 42px;
-  font-weight: 900;
-  border: 5px solid rgba(255, 255, 255, 0.3);
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #bbf7d0;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.profile-status span {
+  width: 9px;
+  height: 9px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.15);
 }
 
 .hero-card h3 {
@@ -169,6 +222,8 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+  position: relative;
+  z-index: 3;
 }
 
 .stats div {
@@ -394,6 +449,10 @@ footer p {
     font-size: 24px;
   }
 
+  .profile-frame {
+    height: 420px;
+  }
+
   .stats {
     grid-template-columns: 1fr;
     margin-top: 0;
@@ -431,6 +490,10 @@ footer p {
 
   .hero p {
     font-size: 17px;
+  }
+
+  .profile-frame {
+    height: 360px;
   }
 
   .section {
