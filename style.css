@@ -516,98 +516,75 @@ footer p {
     text-align: center;
   }
 }
-/* AJUSTE PREMIUM DA FOTO DE PERFIL */
+/* CORREÇÃO FINAL - FOTO PREMIUM MENOR */
+
+body {
+  overflow-x: hidden !important;
+}
 
 .hero {
-  min-height: 560px;
+  min-height: 620px !important;
 }
 
 .hero-content {
-  grid-template-columns: 1.3fr 360px;
-  gap: 42px;
-  margin-top: 75px;
-}
-
-.hero h1 {
-  font-size: 54px;
-}
-
-.hero h2 {
-  font-size: 24px;
-}
-
-.hero p {
-  font-size: 18px;
+  max-width: 1150px !important;
+  margin: 90px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 280px !important;
+  gap: 42px !important;
+  align-items: center !important;
 }
 
 .hero-card {
-  max-width: 340px;
-  padding: 18px;
-  border-radius: 28px;
-  margin-left: auto;
+  width: 280px !important;
+  max-width: 280px !important;
+  padding: 16px !important;
+  border-radius: 26px !important;
+  margin-left: auto !important;
 }
 
 .profile-frame {
-  width: 230px;
-  height: 285px;
-  max-width: 230px;
-  margin: 0 auto 18px;
-  border-radius: 22px;
-  border: 3px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+  width: 210px !important;
+  max-width: 210px !important;
+  height: 260px !important;
+  margin: 0 auto 16px !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
 }
 
 .profile-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
 }
 
 .profile-status {
-  font-size: 11px;
-  padding: 7px 11px;
-  margin-bottom: 14px;
+  font-size: 10px !important;
+  padding: 6px 10px !important;
+  margin-bottom: 12px !important;
 }
 
 .hero-card h3 {
-  font-size: 20px;
+  font-size: 18px !important;
 }
 
 .hero-card p {
-  font-size: 14px;
+  font-size: 13px !important;
 }
 
 @media (max-width: 900px) {
-  .hero {
-    min-height: auto;
-  }
-
   .hero-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .hero-card {
-    margin: 30px auto 0;
+    margin: 30px auto 0 !important;
   }
 
   .profile-frame {
-    width: 220px;
-    height: 275px;
-  }
-}
-
-@media (max-width: 650px) {
-  .profile-frame {
-    width: 200px;
-    height: 250px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .hero h2 {
-    font-size: 20px;
+    width: 200px !important;
+    height: 250px !important;
   }
 }
