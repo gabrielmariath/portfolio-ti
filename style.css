@@ -184,6 +184,15 @@ footer {
     margin-left: 0;
     margin-right: 12px;
   }
+  .experience ul {
+  margin-top: 18px;
+  padding-left: 22px;
+}
+
+.experience li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
 
   .stats {
     grid-template-columns: 1fr;
